@@ -1,0 +1,37 @@
+This is our team
+<div class="block-title-main">
+    <h2>What Our Customer Says</h2>
+    <div class="title-border"></div>
+</div>
+<div class="htb-main">
+    <div class="htb-content htb-slider">
+<?php
+$urlMedia = $this->getdata("url");
+    foreach ($this->getdata("staffs") as $staff){
+?>
+        <div class="htb-inner">
+            <div class="htb-img">
+                <a href="">
+                    <img class="img-resp center-b" width="85px" height="85px" style="height: 85px" src="<?php echo $urlMedia.$staff['avatar'] ?>" alt="<?php echo isset($staff['name']) ? $staff['name'] : "";?>" />
+                </a>
+            </div>
+            <div class="htb-content-inner">
+                <p>
+                    <em>
+                        <?php echo isset($staff['profile']) ? $staff['profile'] : ""; ?>
+                    </em>
+                </p>
+                    <div class="htb-sept"></div>
+                <div class="htb-info">
+                    <div class="htb-name">
+                        <?php echo isset($staff['name']) ? $staff['name'] : "" ?>
+                    </div>
+                    <p>
+                        <?php echo isset($staff['position']) ? $staff['position'] : "" ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+<?php  } ?>
+    </div>
+</div>

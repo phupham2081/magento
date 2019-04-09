@@ -1,0 +1,13 @@
+<?php
+$this->getCustomerSession()->setFirstName("Noob");
+$this->getCatalogSession()->setProductTitle("Tiem Long");
+$this->getCheckoutSession()->setNewOrder("3 tui dsf");
+echo $this->getCustomerSession()->getFirstName() ."<br>";
+echo $this->getCatalogSession()->getProductTitle() . "<br>";
+echo $this->getCheckoutSession()->getNewOrder() . "<br>";
+var_dump($this->getCustomerSession()->isLoggedIn());
+if ($this->getCustomerSession()->isLoggedIn()){
+   $customer = $this->getCustomerSession()->getCustomer();
+   var_dump($customer->getEmail());
+}
+?>

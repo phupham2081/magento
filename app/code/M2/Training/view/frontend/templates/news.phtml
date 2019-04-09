@@ -1,0 +1,20 @@
+<?php
+echo $block->sayHello();
+?>
+<?php echo $newstitle ?>
+<div class="container">
+<h2>Calendar Demo</h2>
+<table id="calendar-demo" class="calendar"></table>
+<h2>Date picker Demo</h2>
+<input class="form-control" id="demo" type="text"></div>
+
+<script>
+    require(
+        [
+            'jquery',
+            'calendarjs'
+        ],function($){
+            $('#demo').dcalendarpicker({format: 'dd-mm-YY'});
+        }
+    );
+</script>

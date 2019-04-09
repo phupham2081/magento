@@ -1,0 +1,8 @@
+<config>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="change_product" type="TMG\ProductAtb\Plugin\Product" sortOrder="1" disabled="true"/>
+    </type>
+    <type name="Magento\Quote\Model\Quote\Item\ToOrderItem">
+        <plugin name="product_to_order_item" type="TMG\ProductAtb\Model\Plugin\Quote\ProductToOrderItem"/>
+    </type>
+</config>

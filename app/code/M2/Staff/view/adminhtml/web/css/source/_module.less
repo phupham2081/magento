@@ -1,0 +1,12 @@
+@m2staff-icons-admin_font-name-path: '@{baseDir}/fonts/M2-Staff/icomoon';
+@m2staff-icons-admin_font-name: 'm2staff';
+.lib-font-face(
+  @family-name: @m2staff-icons-admin_font-name;
+  @font-path: @m2staff-icons-admin_font-name-path;
+  @font-weight: nomal;
+  @font-style: nomal;
+);
+.admin__menu .item-staff.parent.level-0 > a:before {
+  font-family: @m2staff-icons-admin_font-name;
+  content: "\e976";
+}

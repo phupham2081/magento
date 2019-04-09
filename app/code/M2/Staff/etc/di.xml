@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="staff_listing_data_source" xsi:type="string">M2\Staff\Model\ResourceModel\Staff\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="M2\Staff\Model\ResourceModel\Staff\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">staff</argument>
+            <argument name="resourceModel" xsi:type="string">M2\Staff\Model\ResourceModel\Staff</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="exampleTestCli" xsi:type="object">M2\Staff\Console\TestCli</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="M2\Staff\Controller\Index\Example">
+        <plugin name="M2_Staff_Plugin" type="M2\Staff\Plugin\ExamplePlugin" sortOrder="1" disabled="false" />
+    </type>
+</config>

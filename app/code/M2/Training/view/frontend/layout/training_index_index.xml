@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="M2_Training::css/main.css" />
+        <css src="M2_Training::css/dcalendar.picker.css" />
+
+        <script src="M2_Training::js/main.js"/>
+    </head>
+    <body>
+        <referenceBlock name="content">
+            <block class="M2\Training\Block\Training" name="news_training" template="news.phtml" />
+        </referenceBlock>
+    </body>
+</page>
