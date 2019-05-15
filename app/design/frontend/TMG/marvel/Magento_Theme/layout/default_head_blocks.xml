@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <css src="css/custom.css" />
+        <css src="css/unicons.css" />
+
+
+        <!-- Bootstrap 4 -->
+        <css src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" src_type="url" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" src_type="url" />
+
+        <css src="css/owl.carousel.min.css" />
+        <!-- Google Fonts -->
+        <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" src_type="url" />
+    </head>
+</page>

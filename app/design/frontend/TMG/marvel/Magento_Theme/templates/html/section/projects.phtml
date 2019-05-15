@@ -1,0 +1,60 @@
+<section id="projects">
+    <div class="container">
+        <p class="projects__title">
+            Things I have designed for digital media agencies
+        </p>
+        <div id="owlslider" class="projects__slider">
+<!--            <img src="--><?php //echo $this->getViewFileUrl('images/project/project-image01.png')?><!--" alt="">-->
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="project-info">
+                        <img src="<?php echo $this->getViewFileUrl('images/project/project-image01.png')?>" class="img-fluid" alt="project image">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="project-info">
+                        <img src="<?php echo $this->getViewFileUrl('images/project/project-image02.png')?>" class="img-fluid" alt="project image">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="project-info">
+                        <img src="<?php echo $this->getViewFileUrl('images/project/project-image03.png')?>" class="img-fluid" alt="project image">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="project-info">
+                        <img src="<?php echo $this->getViewFileUrl('images/project/project-image04.png')?>" class="img-fluid" alt="project image">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="project-info">
+                        <img src="<?php echo $this->getViewFileUrl('images/project/project-image05.png')?>" class="img-fluid" alt="project image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    (function  () {
+        require(["jquery","owlcarousel"],function($) {
+            $(document).ready(function() {
+                // $("#owlslider").owlCarousel({
+                //     navigation : true, // Show next and prev buttons
+                //     autoPlay: false, //Set AutoPlay to 3 seconds
+                //     items : 5
+                // });
+                $('.owl-carousel').owlCarousel({
+                    items: 1,
+                    loop:true,
+                    margin:10,
+                    nav:true
+                });
+            });
+        });
+    })();
+</script>

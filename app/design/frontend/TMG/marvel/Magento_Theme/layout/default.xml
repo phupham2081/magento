@@ -1,0 +1,28 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceContainer  name="header.panel.wrapper" remove="true"/>
+        <move element="catalog.topnav" destination="header-wrapper" after="logo"/>
+        <referenceBlock name="minicart" remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="color.mode" after="catalog.topnav" template="Magento_Theme::html/header/color-mode.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="marvel.about" template="Magento_Theme::html/section/about.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="marvel.projects" template="Magento_Theme::html/section/projects.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="marvel.resume" template="Magento_Theme::html/section/resume.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="marvel.contact" template="Magento_Theme::html/section/contact.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <referenceContainer name="footer">
+                <block class="Magento\Framework\View\Element\Template" name="marvel-design" template="Magento_Theme::html/marvel-design.phtml" />
+            </referenceContainer>
+        </referenceContainer>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+    </body>
+</page>
