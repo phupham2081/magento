@@ -14,6 +14,7 @@
             <block class="Magento\Framework\View\Element\Template" name="marvel.projects" template="Magento_Theme::html/section/projects.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="marvel.resume" template="Magento_Theme::html/section/resume.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="marvel.contact" template="Magento_Theme::html/section/contact.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="marvel.social" template="Magento_Theme::html/section/social.phtml"/>
         </referenceContainer>
 
         <referenceContainer name="footer-container">

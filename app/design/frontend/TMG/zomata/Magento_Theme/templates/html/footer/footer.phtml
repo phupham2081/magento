@@ -1,0 +1,68 @@
+<div id="zomata-ft">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="footer-block">
+                    <div class="footer-logo">
+                        <img src="" alt="">
+                    </div>
+                    <p class="footer-text">
+                        Lorem ipsum dolor amet cons adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="footer-block">
+                    <p class="footer-block-title">
+                        Customer Support
+                    </p>
+                    <img src="" alt="">
+                    <?php
+                    echo $this->getLayout()
+                        ->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('footer_links_block')
+                        ->toHtml(); ?>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="footer-block">
+                    <p class="footer-block-title">
+                        Contact Info
+                    </p>
+                    <img src="" alt="">
+                    <div class="footer-block-link">
+                        <i class="far fa-paper-plane"></i>
+                        <p>205 Olazu Familia, Herba Street Front USA</p>
+                    </div>
+                    <div class="footer-block-link">
+                        <i class="far fa-envelope-open"></i>
+                        <p>zomatainfo@gmail.com</p>
+                    </div>
+                    <div class="footer-block-link">
+                        <i class="fas fa-headphones"></i>
+                        <p>002- 01008431112</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="footer-block">
+                    <p class="footer-block-title">
+                        Newsletters
+                    </p>
+                    <img src="" alt="">
+                    <p class="footer-block-des">
+                        Enter your email and we’ll send you latest information plans.
+                    </p>
+                    <?php echo $this->getLayout()->createBlock('Magento\Newsletter\Block\Subscribe')->setTemplate('Magento_Newsletter::subscribe.phtml')->toHtml(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

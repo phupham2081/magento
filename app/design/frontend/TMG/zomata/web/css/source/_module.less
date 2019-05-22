@@ -1,0 +1,48 @@
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-main {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+//
+//  Desktop & mobile
+//  _____________________________________________
+//  __________________top header_________________
+.panel.header {
+  font-size: @font-size-small;
+}
+.header-text {
+  float: left;
+  margin-top: 5px;
+}
+.header-text span {
+  letter-spacing: 0.45px;
+  margin-right: 24px;
+}
+.header-text span i {
+  margin-right: 10px;
+}
+.header-link {
+  float: right;
+  margin: 4px 21px 0 0;
+  letter-spacing: 8px;
+  font-size: 13px;
+  color: #575f65;
+}
+.header-link a {
+  color: @color-text-grey;
+}
+
+//
+//  Style-m
+//  _____________________________________________
+& when (@media-common = true) {
+
+}

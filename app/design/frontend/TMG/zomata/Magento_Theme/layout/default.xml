@@ -1,0 +1,41 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo/logo.png</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="header.panel">
+            <referenceBlock name="skip_to_content" remove="true"/>
+            <referenceBlock name="top.links" remove="true"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.top.header" template="Magento_Theme::html/header/top.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.slider" template="Magento_Theme::html/header/slider.phtml"/>
+        </referenceContainer>
+        <block class="Magento\Framework\View\Element\Template" name="zomata.search.and.cart" template="Magento_Theme::html/header/searchandcart.phtml"/>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="zomata.intro" template="Magento_Theme::html/section/intro.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.feature" template="Magento_Theme::html/section/feature.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.products" template="Magento_Theme::html/section/products.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.visit" template="Magento_Theme::html/section/visit.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.advantages" template="Magento_Theme::html/section/advantages.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.gallery" template="Magento_Theme::html/section/gallery.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.peoples" template="Magento_Theme::html/section/peoples.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.counter" template="Magento_Theme::html/section/counter.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.feedback" template="Magento_Theme::html/section/feedback.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.blog" template="Magento_Theme::html/section/blog.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="zomata.brand" template="Magento_Theme::html/section/brand.phtml"/>
+        </referenceContainer>
+        <move element="catalog.topnav" destination="header-wrapper" after="logo"/>
+        <move element="catalog.topnav" destination="header-wrapper" after="catalog.topnav"/>
+        <move element="zomata.slider" destination="content" before="-"/>
+        <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="zomata-footer" template="Magento_Theme::html/footer/footer.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="footer" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="minicart" remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+    </body>
+</page>

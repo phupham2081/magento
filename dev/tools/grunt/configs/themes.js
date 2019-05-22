@@ -50,5 +50,35 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
+    },
+    marvel: {
+        area: 'frontend',
+        name: 'TMG/marvel',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
+    lessluma: {
+        area: 'frontend',
+        name: 'tmg/lessluma',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
+    zomata: {
+        area: 'frontend',
+        name: 'tmg/zomata',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
     }
 };
