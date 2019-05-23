@@ -1,16 +1,54 @@
-<div id="zomata-slider" class="slider">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="slider-title">
-                    Organic Food Is <br>  Good For Health
-                </h1>
-                <p class="slider-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                <div class="slider-button">
-                    <a href="#">Our Services</a>
-                    <a href="#">Our Services</a>
+<div class="owl-carousel">
+    <div class="slider-wrap item">
+        <img src="<?php echo $this->getViewFileUrl('images/slider/slider1.jpg'); ?>" alt="">
+        <div class="slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="slider-title">
+                            Organic Food Is <br>  Good For Health
+                        </h1>
+                        <p class="slider-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class="slider-button">
+                            <a href="#">Our Services</a>
+                            <a href="#">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-wrap item">
+        <img src="<?php echo $this->getViewFileUrl('images/slider/slider1-2.jpg'); ?>" alt="">
+        <div class="slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="slider-title">
+                            Organic Food Is <br>  Good For Health
+                        </h1>
+                        <p class="slider-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class="slider-button">
+                            <a href="#">Our Services</a>
+                            <a href="#">Our Services</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    (function  () {
+        require(["jquery","owlcarousel"],function($) {
+            $(document).ready(function() {
+                $('.owl-carousel').owlCarousel({
+                    items: 1,
+                    loop:true,
+                    margin:0,
+                    nav:true
+                });
+            });
+        });
+    })();
+</script>

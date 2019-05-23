@@ -4,6 +4,7 @@
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">157</argument>
             </arguments>
         </referenceBlock>
         <referenceContainer name="header.panel">
@@ -12,7 +13,9 @@
             <block class="Magento\Framework\View\Element\Template" name="zomata.top.header" template="Magento_Theme::html/header/top.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="zomata.slider" template="Magento_Theme::html/header/slider.phtml"/>
         </referenceContainer>
-        <block class="Magento\Framework\View\Element\Template" name="zomata.search.and.cart" template="Magento_Theme::html/header/searchandcart.phtml"/>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="zomata.search.and.cart" after="catalog.topnav" template="Magento_Theme::html/header/searchandcart.phtml"/>
+        </referenceContainer>
 
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="zomata.intro" template="Magento_Theme::html/section/intro.phtml"/>
@@ -28,7 +31,6 @@
             <block class="Magento\Framework\View\Element\Template" name="zomata.brand" template="Magento_Theme::html/section/brand.phtml"/>
         </referenceContainer>
         <move element="catalog.topnav" destination="header-wrapper" after="logo"/>
-        <move element="catalog.topnav" destination="header-wrapper" after="catalog.topnav"/>
         <move element="zomata.slider" destination="content" before="-"/>
         <referenceContainer name="footer-container">
             <block class="Magento\Framework\View\Element\Template" name="zomata-footer" template="Magento_Theme::html/footer/footer.phtml"/>
