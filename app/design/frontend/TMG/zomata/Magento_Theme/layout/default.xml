@@ -9,10 +9,10 @@
         </referenceBlock>
         <referenceContainer name="header.panel">
             <referenceBlock name="skip_to_content" remove="true"/>
-            <referenceBlock name="top.links" remove="true"/>
             <block class="Magento\Framework\View\Element\Template" name="zomata.top.header" template="Magento_Theme::html/header/top.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="zomata.slider" template="Magento_Theme::html/header/slider.phtml"/>
         </referenceContainer>
+        <referenceBlock name="top.links" remove="true"/>
         <referenceContainer name="header-wrapper">
             <block class="Magento\Framework\View\Element\Template" name="zomata.search.and.cart" after="catalog.topnav" template="Magento_Theme::html/header/searchandcart.phtml"/>
         </referenceContainer>

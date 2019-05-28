@@ -2,7 +2,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
         <!-- Owl carousel -->
-        <css src="css/owl.carousel.min.css" />
+        <css src="css/assets/owl/owl.carousel.min.css" />
+
+        <css src="css/assets/dripicon/dripicons.css" />
         <!-- Google Fonts -->
         <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" src_type="url" />
     </head>

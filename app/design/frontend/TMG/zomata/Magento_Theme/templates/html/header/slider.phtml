@@ -1,4 +1,4 @@
-<div class="owl-carousel">
+<div class="owl-carousel slider-zomata">
     <div class="slider-wrap item">
         <img src="<?php echo $this->getViewFileUrl('images/slider/slider1.jpg'); ?>" alt="">
         <div class="slider">
@@ -39,16 +39,14 @@
     </div>
 </div>
 <script>
-    (function  () {
-        require(["jquery","owlcarousel"],function($) {
-            $(document).ready(function() {
-                $('.owl-carousel').owlCarousel({
-                    items: 1,
-                    loop:true,
-                    margin:0,
-                    nav:true
-                });
+    require(["jquery","owlcarousel"],function($) {
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                items: 1,
+                loop:true,
+                margin:0,
+                nav:true
             });
         });
-    })();
+    });
 </script>

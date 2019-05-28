@@ -1,10 +1,10 @@
-<div id="zomata-ft">
+<div id="zomata-ft" style="background-image: url('<?php echo $this->getViewFileUrl('images/bg/bg6.jpg'); ?>')">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3">
+            <div class="col-md-3 col-xl-3">
                 <div class="footer-block">
                     <div class="footer-logo">
-                        <img src="" alt="">
+                        <img src="<?php echo $this->getViewFileUrl('images/logo/logo-white.png'); ?>" alt="">
                     </div>
                     <p class="footer-text">
                         Lorem ipsum dolor amet cons adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip.
@@ -18,12 +18,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3">
-                <div class="footer-block">
+            <div class="col-md-3 col-xl-3">
+                <div class="footer-block footer__block--padding">
                     <p class="footer-block-title">
                         Customer Support
                     </p>
-                    <img src="" alt="">
+                    <img src="<?php echo $this->getViewFileUrl('images/shape/f.png'); ?>" alt="">
                     <?php
                     echo $this->getLayout()
                         ->createBlock('Magento\Cms\Block\Block')
@@ -31,12 +31,12 @@
                         ->toHtml(); ?>
                 </div>
             </div>
-            <div class="col-xl-3">
-                <div class="footer-block">
+            <div class="col-md-3 col-xl-3">
+                <div class="footer-block footer__block--padding">
                     <p class="footer-block-title">
                         Contact Info
                     </p>
-                    <img src="" alt="">
+                    <img src="<?php echo $this->getViewFileUrl('images/shape/f.png'); ?>" alt="">
                     <div class="footer-block-link">
                         <i class="far fa-paper-plane"></i>
                         <p>205 Olazu Familia, Herba Street Front USA</p>
@@ -51,18 +51,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3">
-                <div class="footer-block">
+            <div class="col-md-3 col-xl-3">
+                <div class="footer-block footer__block--padding">
                     <p class="footer-block-title">
                         Newsletters
                     </p>
-                    <img src="" alt="">
+                    <img src="<?php echo $this->getViewFileUrl('images/shape/f.png'); ?>" alt="">
                     <p class="footer-block-des">
                         Enter your email and we’ll send you latest information plans.
                     </p>
                     <?php echo $this->getLayout()->createBlock('Magento\Newsletter\Block\Subscribe')->setTemplate('Magento_Newsletter::subscribe.phtml')->toHtml(); ?>
                 </div>
             </div>
+        </div>
+        <div class="footer-cp">
+            <?php echo $this->getLayout()->createBlock('Magento\Theme\Block\Html\Footer')->setTemplate('Magento_Theme::html/copyright.phtml')->toHtml(); ?>
         </div>
     </div>
 </div>

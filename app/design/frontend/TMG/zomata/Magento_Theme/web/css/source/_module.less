@@ -1,0 +1,310 @@
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    //  __________________ global ___________________
+    //display none compare product, top links
+    .panel.header .links {
+        display: none;
+    }
+    .page-main {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navigation {
+        background: @_nav-background-color !important;
+        margin: -51px 0 0 394px !important;
+
+        & .level0 {
+            margin: 0 16px 0 0 !important;
+        }
+    }
+    .panel.wrapper {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 6px;
+    }
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+//
+//  Desktop & mobile
+//  _____________________________________________
+
+
+//
+//  Style-m
+//  _____________________________________________
+& when (@media-common = true) {
+
+    //
+    //  Global
+    //  _____________________________________________
+
+    //display none compare product, top links
+    .compare.wrapper, .header.links{
+        display: none;
+    }
+
+    body {
+        font-family: 'Rubik', sans-serif;
+    }
+
+    //
+    //  Top header
+    //  _____________________________________________
+    .panel.header {
+        font-size: @font-size-small;
+
+        .header-text {
+            float: left;
+            margin-top: 5px;
+            span {
+                letter-spacing: 0.45px;
+                margin-right: 24px;
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .header-link {
+            color: #575f65;
+            float: right;
+            font-size: 13px;
+            letter-spacing: 8px;
+            margin: 4px -9px 0 0;
+
+            a {
+                color: @color-text-grey;
+            }
+        }
+    }
+    .header.content {
+        position: relative;
+    }
+    .search-and-cart {
+        position: absolute;
+        right: 28px;
+        background: rgba(0, 0, 0, 0);
+        top: 38px;
+        font-size: 15px;
+        z-index: 4;
+        letter-spacing: 18px;
+        & li {
+            display: inline-block;
+            list-style: none;
+            a {
+                color: @color-text-grey;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .logo img {
+        margin: 30px 0 0 34px;
+    }
+
+    //
+    //  Slider
+    //  _____________________________________________
+    .slider-wrap img {
+        position: absolute;
+        top: 0;
+    }
+
+
+    .owl-zomata {
+        position: absolute;
+        top: 42%;
+        opacity: 0;
+        span {
+            background-color: @color-primary-green;
+            color: @color-white;
+            border-radius: 50%;
+            padding: 8px 30px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+    }
+    .owl-carousel.slider-zomata {
+        & button.owl-next {
+            .owl-zomata();
+            right: 3%;
+        }
+        &:hover button.owl-next {
+            opacity: 1;
+        }
+        & button.owl-prev {
+            .owl-zomata();
+            left: 3%;
+        }
+        &:hover button.owl-prev {
+            opacity: 1;
+        }
+        & button.owl-next:hover span{
+            color: @color-black;
+            background-color: @color-white;
+        }
+        & button.owl-prev:hover span{
+            color: @color-black;
+            background-color: @color-white;
+        }
+    }
+
+
+    h1.slider-title {
+        margin: 168px 0 0 0;
+        font-size: 90px;
+        font-weight: 300;
+    }
+
+    .slider-description {
+        margin: 23px 0 0 0;
+        font-size: 18px;
+        width: 52%;
+        line-height: 30px;
+    }
+
+    .slider-button {
+        margin-top: 58px;
+        letter-spacing: 26px;
+        margin-bottom: 20%;
+        a {
+            text-decoration: none;
+            padding: 21px 43px;
+            background-color: @color-primary-green;
+            color: @color-white;
+            font-weight: 500;
+            letter-spacing: .3px;
+
+            &:nth-child(2) {
+                background-color: @color-primary-yellow;
+            }
+
+            &:hover {
+                background-color: @color-primary-yellow;
+            }
+        }
+    }
+
+    //
+    //  Footer
+    //  _____________________________________________
+
+    #zomata-ft {
+        a {
+            text-decoration: none;
+        }
+        color: @color-white;
+    }
+
+    .footer-block {
+        margin: 200px -15px 0 0;
+        &:nth-child(2),&:nth-child(3),&:nth-child(4) {
+            padding-left: 54px;
+        }
+        .footer-logo {
+            img {
+                margin: 0 0 25px 7px;
+            }
+        }
+        .footer-text {
+            line-height: 30px;
+            margin: 0 0 20px 7px;
+        }
+        .footer-block-title {
+            font-size: 22px;
+            margin-top: -4px;
+        }
+        .footer-block-link {
+            display: flex;
+
+            p {
+                margin: -10px 0 22px 17px;
+                line-height: 28px;
+            }
+        }
+        &-des {
+            margin: -8px 0 0 0;
+            line-height: 30px;
+        }
+        .block.newsletter {
+            width: 97%;
+            .actions {
+                display: block;
+                button {
+                    padding: 10px 40px;
+                    background-color:@color-primary-yellow;
+                }
+            }
+            .field {
+                margin: 13px 0 12px 0;
+                input {
+                    color: rgba(0, 0, 0, 0.05);
+                    padding: 18px 20px;
+                }
+            }
+        }
+    }
+}
+.footer__block--padding {
+    padding-left: 52px;
+    ul.footer.links {
+        margin: -6px 0 0 -39px;
+    }
+    li {
+        list-style: none;
+        a {
+            color: @color-white;
+        }
+    }
+    img {
+        padding: 9px 0 37px 0;
+    }
+}
+.footer__block--padding:nth-child(3){
+    padding-left: 48px;
+}
+
+.footer-cp {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #357e4e;
+    .zomata-copyright {
+        color: #a0d1b0;;
+        font-size: 14px;
+        span {
+            color: @color-primary-yellow;
+        }
+    }
+}
+.footer-socials {
+    display: flex;
+    margin: 0 2px 80px 3px;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        border-radius: 50%;
+        height: 35px;
+        background: #52b272;
+        color: white;
+        margin: 0 5px;
+    }
+}
+
+
